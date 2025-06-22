@@ -1,0 +1,2387 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angela Young 半永久定妝</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#d4a373',secondary:'#f5ebe0'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Noto Sans TC', sans-serif;
+}
+.hero-section {
+position: relative;
+background-image: url('');
+background-size: cover;
+background-position: right center;
+}
+.hero-section::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(to right, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.8) 30%, rgba(255,255,255,0.4) 60%, rgba(255,255,255,0) 100%);
+z-index: 1;
+}
+.hero-content {
+position: relative;
+z-index: 2;
+}
+.floating-buttons {
+animation: pulse 2s infinite;
+}
+@keyframes pulse {
+0% {
+box-shadow: 0 0 0 0 rgba(212, 163, 115, 0.7);
+}
+70% {
+box-shadow: 0 0 0 10px rgba(212, 163, 115, 0);
+}
+100% {
+box-shadow: 0 0 0 0 rgba(212, 163, 115, 0);
+}
+}
+.service-card {
+transition: all 0.3s ease;
+}
+.service-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.testimonial-slider {
+overflow: hidden;
+position: relative;
+}
+.slide-track {
+display: flex;
+animation: scroll 30s linear infinite;
+width: calc(300px * 10);
+}
+@keyframes scroll {
+0% {
+transform: translateX(0);
+}
+100% {
+transform: translateX(calc(-300px * 5));
+}
+}
+.language-active {
+color: #d4a373;
+font-weight: bold;
+}
+.hidden-content {
+display: none;
+}
+</style>
+</head>
+<body class="bg-white">
+<header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+<div class="container mx-auto px-4 py-4 flex justify-between items-center">
+<a href="#" class="text-3xl font-['Pacifico'] text-primary">Angela Young 半永久定妝</a>
+<nav class="hidden md:flex space-x-8 text-gray-700">
+<a href="#" class="hover:text-primary transition-colors lang-zh">首頁</a>
+<a href="#" class="hover:text-primary transition-colors lang-vi hidden">Trang chủ</a>
+<a href="#" class="hover:text-primary transition-colors lang-en hidden">Home</a>
+<a href="#services" class="hover:text-primary transition-colors lang-zh">服務項目</a>
+<a href="#services" class="hover:text-primary transition-colors lang-vi hidden">Dịch vụ</a>
+<a href="#services" class="hover:text-primary transition-colors lang-en hidden">Services</a>
+<a href="#about" class="hover:text-primary transition-colors lang-zh">關於我們</a>
+<a href="#about" class="hover:text-primary transition-colors lang-vi hidden">Về chúng tôi</a>
+<a href="#about" class="hover:text-primary transition-colors lang-en hidden">About Us</a>
+<a href="#contact" class="hover:text-primary transition-colors lang-zh">聯絡我們</a>
+<a href="#contact" class="hover:text-primary transition-colors lang-vi hidden">Liên hệ</a>
+<a href="#contact" class="hover:text-primary transition-colors lang-en hidden">Contact</a>
+</nav>
+<div class="flex items-center space-x-4">
+<div class="flex space-x-2 text-sm">
+<button id="lang-zh" class="language-active px-2 py-1 rounded-full hover:bg-gray-100">繁中</button>
+<button id="lang-vi" class="px-2 py-1 rounded-full hover:bg-gray-100">Tiếng Việt</button>
+<button id="lang-en" class="px-2 py-1 rounded-full hover:bg-gray-100">EN</button>
+</div>
+<button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700" id="mobile-menu-button">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</div>
+<div id="mobile-menu" class="md:hidden hidden bg-white px-4 py-2 shadow-md">
+<a href="#" class="block py-2 hover:text-primary lang-zh">首頁</a>
+<a href="#" class="block py-2 hover:text-primary lang-vi hidden">Trang chủ</a>
+<a href="#" class="block py-2 hover:text-primary lang-en hidden">Home</a>
+<a href="#services" class="block py-2 hover:text-primary lang-zh">服務項目</a>
+<a href="#services" class="block py-2 hover:text-primary lang-vi hidden">Dịch vụ</a>
+<a href="#services" class="block py-2 hover:text-primary lang-en hidden">Services</a>
+<a href="#about" class="block py-2 hover:text-primary lang-zh">關於我們</a>
+<a href="#about" class="block py-2 hover:text-primary lang-vi hidden">Về chúng tôi</a>
+<a href="#about" class="block py-2 hover:text-primary lang-en hidden">About Us</a>
+<a href="#contact" class="block py-2 hover:text-primary lang-zh">聯絡我們</a>
+<a href="#contact" class="block py-2 hover:text-primary lang-vi hidden">Liên hệ</a>
+<a href="#contact" class="block py-2 hover:text-primary lang-en hidden">Contact</a>
+</div>
+</header>
+<div class="fixed right-4 bottom-24 z-50 flex flex-col space-y-3">
+<a href="tel:0923393066" class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center floating-buttons shadow-lg">
+<i class="ri-phone-fill ri-lg"></i>
+</a>
+<a href="#" class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center floating-buttons shadow-lg">
+<i class="ri-facebook-fill ri-lg"></i>
+</a>
+<a href="#" class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center floating-buttons shadow-lg">
+<i class="ri-instagram-fill ri-lg"></i>
+</a>
+<a href="#" class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center floating-buttons shadow-lg">
+<i class="ri-line-fill ri-lg"></i>
+</a>
+</div>
+<main class="pt-16">
+<section class="hero-section w-full h-[600px] flex items-center">
+<div class="container mx-auto px-4 hero-content">
+<div class="max-w-2xl">
+<h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800 lang-zh">自然美 - 定義專屬風格</h1>
+<h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800 lang-vi hidden">Vẻ Đẹp Tự Nhiên – Định Hình Phong Cách Riêng Của Bạn</h1>
+<h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800 lang-en hidden">Natural Beauty - Define Your Style</h1>
+<p class="text-lg text-gray-600 mb-8 lang-zh">專業的半永久定妝服務，讓您每天都能擁有完美妝容，展現自信魅力</p>
+<p class="text-lg text-gray-600 mb-8 lang-vi hidden">Dịch vụ phun xăm thẩm mỹ chuyên nghiệp giúp bạn luôn xinh đẹp và tự tin mỗi ngày</p>
+<p class="text-lg text-gray-600 mb-8 lang-en hidden">Professional semi-permanent makeup services to help you look flawless and confident every day</p>
+<div class="flex flex-wrap gap-4">
+<a href="#contact" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-button whitespace-nowrap lang-zh">立即預約</a>
+<a href="#contact" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-button whitespace-nowrap lang-vi hidden">Đặt Lịch Ngay</a>
+<a href="#contact" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-button whitespace-nowrap lang-en hidden">Book Now</a>
+<button id="price-btn" class="border border-primary text-primary hover:bg-primary/10 px-6 py-3 rounded-button whitespace-nowrap lang-zh">服務價格</button>
+<button id="price-btn-vi" class="border border-primary text-primary hover:bg-primary/10 px-6 py-3 rounded-button whitespace-nowrap lang-vi hidden">Bảng Giá</button>
+<button id="price-btn-en" class="border border-primary text-primary hover:bg-primary/10 px-6 py-3 rounded-button whitespace-nowrap lang-en hidden">Price List</button>
+<a href="#" class="border border-primary text-primary hover:bg-primary/10 px-6 py-3 rounded-button whitespace-nowrap lang-zh">免費諮詢</a>
+<a href="#" class="border border-primary text-primary hover:bg-primary/10 px-6 py-3 rounded-button whitespace-nowrap lang-vi hidden">Tư Vấn Miễn Phí</a>
+<a href="#" class="border border-primary text-primary hover:bg-primary/10 px-6 py-3 rounded-button whitespace-nowrap lang-en hidden">Free Consultation</a>
+</div>
+</div>
+</div>
+</section>
+<section id="services" class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold mb-2 lang-zh">服務項目</h2>
+<h2 class="text-3xl font-bold mb-2 lang-vi hidden">Dịch Vụ Chính</h2>
+<h2 class="text-3xl font-bold mb-2 lang-en hidden">Our Services</h2>
+<p class="text-gray-600 max-w-2xl mx-auto lang-zh">我們提供多種專業半永久定妝服務，由經驗豐富的技術師為您打造自然美麗的妝容</p>
+<p class="text-gray-600 max-w-2xl mx-auto lang-vi hidden">Chúng tôi cung cấp nhiều dịch vụ phun xăm thẩm mỹ chuyên nghiệp, được thực hiện bởi các chuyên gia giàu kinh nghiệm</p>
+<p class="text-gray-600 max-w-2xl mx-auto lang-en hidden">We offer a range of professional semi-permanent makeup services performed by experienced technicians</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="service-card bg-white p-6 rounded-lg shadow-md">
+<div class="w-full h-48 mb-6 rounded-lg overflow-hidden">
+<img src="" alt="眉毛塑形" class="w-full h-full object-cover object-top">
+</div>
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+<i class="ri-brush-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-center mb-2 lang-zh">眉毛塑形</h3>
+<h3 class="text-xl font-bold text-center mb-2 lang-vi hidden">Xăm Mày</h3>
+<h3 class="text-xl font-bold text-center mb-2 lang-en hidden">Eyebrow Microblading</h3>
+<p class="text-gray-600 text-center mb-4 lang-zh">根據臉型設計完美眉形，讓您擁有自然立體的眉毛</p>
+<p class="text-gray-600 text-center mb-4 lang-vi hidden">Thiết kế lông mày hoàn hảo theo khuôn mặt, mang lại vẻ tự nhiên và sống động</p>
+<p class="text-gray-600 text-center mb-4 lang-en hidden">Custom eyebrow design based on your face shape for natural, dimensional brows</p>
+<button class="service-detail-btn mx-auto block text-primary hover:text-primary/80 border-b border-primary pb-1 lang-zh" data-service="eyebrow">了解更多</button>
+<button class="service-detail-btn mx-auto block text-primary hover:text-primary/80 border-b border-primary pb-1 lang-vi hidden" data-service="eyebrow">Tìm Hiểu Thêm</button>
+<button class="service-detail-btn mx-auto block text-primary hover:text-primary/80 border-b border-primary pb-1 lang-en hidden" data-service="eyebrow">Learn More</button>
+</div>
+
+<div class="service-card bg-white p-6 rounded-lg shadow-md">
+<div class="w-full h-48 mb-6 rounded-lg overflow-hidden">
+<img src="" alt="唇部美化" class="w-full h-full object-cover object-top">
+</div>
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+<i class="ri-heart-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-center mb-2 lang-zh">唇部美化</h3>
+<h3 class="text-xl font-bold text-center mb-2 lang-vi hidden">Phun Môi</h3>
+<h3 class="text-xl font-bold text-center mb-2 lang-en hidden">Lip Enhancement</h3>
+<p class="text-gray-600 text-center mb-4 lang-zh">打造自然豐潤的唇色，修飾唇形，讓您擁有迷人笑容</p>
+<p class="text-gray-600 text-center mb-4 lang-vi hidden">Tạo màu môi tự nhiên, cải thiện hình dáng môi cho nụ cười quyến rũ</p>
+<p class="text-gray-600 text-center mb-4 lang-en hidden">Create natural lip color and enhance lip shape for a captivating smile</p>
+<button class="service-detail-btn mx-auto block text-primary hover:text-primary/80 border-b border-primary pb-1 lang-zh" data-service="lip">了解更多</button>
+<button class="service-detail-btn mx-auto block text-primary hover:text-primary/80 border-b border-primary pb-1 lang-vi hidden" data-service="lip">Tìm Hiểu Thêm</button>
+<button class="service-detail-btn mx-auto block text-primary hover:text-primary/80 border-b border-primary pb-1 lang-en hidden" data-service="lip">Learn More</button>
+</div>
+
+<div class="service-card bg-white p-6 rounded-lg shadow-md">
+<div class="w-full h-48 mb-6 rounded-lg overflow-hidden">
+<img src="" alt="髮際線調整" class="w-full h-full object-cover object-top">
+</div>
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+<i class="ri-scissors-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-center mb-2 lang-zh">髮際線調整</h3>
+<h3 class="text-xl font-bold text-center mb-2 lang-vi hidden">Dặm Tóc</h3>
+<h3 class="text-xl font-bold text-center mb-2 lang-en hidden">Hairline Enhancement</h3>
+<p class="text-gray-600 text-center mb-4 lang-zh">修飾髮際線，讓額頭比例更加和諧，展現年輕活力</p>
+<p class="text-gray-600 text-center mb-4 lang-vi hidden">Điều chỉnh đường chân tóc, cân đối tỷ lệ trán cho vẻ ngoài trẻ trung</p>
+<p class="text-gray-600 text-center mb-4 lang-en hidden">Refine your hairline for better facial proportions and a youthful appearance</p>
+<button class="service-detail-btn mx-auto block text-primary hover:text-primary/80 border-b border-primary pb-1 lang-zh" data-service="hairline">了解更多</button>
+<button class="service-detail-btn mx-auto block text-primary hover:text-primary/80 border-b border-primary pb-1 lang-vi hidden" data-service="hairline">Tìm Hiểu Thêm</button>
+<button class="service-detail-btn mx-auto block text-primary hover:text-primary/80 border-b border-primary pb-1 lang-en hidden" data-service="hairline">Learn More</button>
+</div>
+
+<div class="service-card bg-white p-6 rounded-lg shadow-md">
+<div class="w-full h-48 mb-6 rounded-lg overflow-hidden">
+<img src="" alt="睫毛嫁接" class="w-full h-full object-cover object-top">
+</div>
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+<i class="ri-eye-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-center mb-2 lang-zh">睫毛嫁接</h3>
+<h3 class="text-xl font-bold text-center mb-2 lang-vi hidden">Nối Mi</h3>
+<h3 class="text-xl font-bold text-center mb-2 lang-en hidden">Eyelash Extensions</h3>
+<p class="text-gray-600 text-center mb-4 lang-zh">根據眼型設計最適合的睫毛長度和彎度，讓眼睛更加有神</p>
+<p class="text-gray-600 text-center mb-4 lang-vi hidden">Thiết kế độ dài và độ cong mi phù hợp với đôi mắt, giúp ánh nhìn thêm sắc sảo</p>
+<p class="text-gray-600 text-center mb-4 lang-en hidden">Custom eyelash length and curl design to enhance your eyes and gaze</p>
+<button class="service-detail-btn mx-auto block text-primary hover:text-primary/80 border-b border-primary pb-1 lang-zh" data-service="eyelash">了解更多</button>
+<button class="service-detail-btn mx-auto block text-primary hover:text-primary/80 border-b border-primary pb-1 lang-vi hidden" data-service="eyelash">Tìm Hiểu Thêm</button>
+<button class="service-detail-btn mx-auto block text-primary hover:text-primary/80 border-b border-primary pb-1 lang-en hidden" data-service="eyelash">Learn More</button>
+</div>
+
+<div class="service-card bg-white p-6 rounded-lg shadow-md">
+<div class="w-full h-48 mb-6 rounded-lg overflow-hidden">
+<img src="" alt="眼線定妝" class="w-full h-full object-cover object-top">
+</div>
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+<i class="ri-edit-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-center mb-2 lang-zh">眼線定妝</h3>
+<h3 class="text-xl font-bold text-center mb-2 lang-vi hidden">Phun Mí</h3>
+<h3 class="text-xl font-bold text-center mb-2 lang-en hidden">Eyeliner Enhancement</h3>
+<p class="text-gray-600 text-center mb-4 lang-zh">精細的眼線設計，讓眼睛輪廓更加分明，眼神更加深邃</p>
+<p class="text-gray-600 text-center mb-4 lang-vi hidden">Thiết kế đường viền mắt tinh tế, làm nổi bật đường nét mắt, tạo ánh nhìn sâu lắng</p>
+<p class="text-gray-600 text-center mb-4 lang-en hidden">Precise eyeliner design to define your eye contour and create a deeper gaze</p>
+<button class="service-detail-btn mx-auto block text-primary hover:text-primary/80 border-b border-primary pb-1 lang-zh" data-service="eyeliner">了解更多</button>
+<button class="service-detail-btn mx-auto block text-primary hover:text-primary/80 border-b border-primary pb-1 lang-vi hidden" data-service="eyeliner">Tìm Hiểu Thêm</button>
+<button class="service-detail-btn mx-auto block text-primary hover:text-primary/80 border-b border-primary pb-1 lang-en hidden" data-service="eyeliner">Learn More</button>
+</div>
+
+<div class="service-card bg-white p-6 rounded-lg shadow-md">
+<div class="w-full h-48 mb-6 rounded-lg overflow-hidden">
+<img src="" alt="美白護理" class="w-full h-full object-cover object-top">
+</div>
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+<i class="ri-sun-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-center mb-2 lang-zh">美白護理</h3>
+<h3 class="text-xl font-bold text-center mb-2 lang-vi hidden">Chăm Sóc Làm Trắng</h3>
+<h3 class="text-xl font-bold text-center mb-2 lang-en hidden">Skin Brightening</h3>
+<p class="text-gray-600 text-center mb-4 lang-zh">專業美白護理，改善膚色不均，讓肌膚煥發自然光澤</p>
+<p class="text-gray-600 text-center mb-4 lang-vi hidden">Chăm sóc làm trắng chuyên nghiệp, cải thiện màu da không đều, giúp làn da tươi sáng tự nhiên</p>
+<p class="text-gray-600 text-center mb-4 lang-en hidden">Professional skin brightening treatment to improve uneven skin tone and restore natural radiance</p>
+<button class="service-detail-btn mx-auto block text-primary hover:text-primary/80 border-b border-primary pb-1 lang-zh" data-service="brightening">了解更多</button>
+<button class="service-detail-btn mx-auto block text-primary hover:text-primary/80 border-b border-primary pb-1 lang-vi hidden" data-service="brightening">Tìm Hiểu Thêm</button>
+<button class="service-detail-btn mx-auto block text-primary hover:text-primary/80 border-b border-primary pb-1 lang-en hidden" data-service="brightening">Learn More</button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold mb-2 lang-zh">真實案例</h2>
+<h2 class="text-3xl font-bold mb-2 lang-vi hidden">Hình Ảnh Thực Tế</h2>
+<h2 class="text-3xl font-bold mb-2 lang-en hidden">Real Results</h2>
+<p class="text-gray-600 max-w-2xl mx-auto lang-zh">這些都是我們的真實客戶案例，展示了我們的專業技術和精湛工藝</p>
+<p class="text-gray-600 max-w-2xl mx-auto lang-vi hidden">Đây là những hình ảnh thực tế từ khách hàng, thể hiện kỹ thuật chuyên nghiệp và tay nghề tinh xảo của chúng tôi</p>
+<p class="text-gray-600 max-w-2xl mx-auto lang-en hidden">These are real client results showcasing our professional techniques and craftsmanship</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="overflow-hidden rounded-lg shadow-md">
+<img src="" alt="眉毛塑形前後對比" class="w-full h-64 object-cover object-top">
+<div class="p-4">
+<h3 class="font-bold text-lg mb-1 lang-zh">眉毛塑形</h3>
+<h3 class="font-bold text-lg mb-1 lang-vi hidden">Xăm Mày</h3>
+<h3 class="font-bold text-lg mb-1 lang-en hidden">Eyebrow Microblading</h3>
+<p class="text-gray-600 text-sm lang-zh">自然立體的眉毛，展現精緻五官</p>
+<p class="text-gray-600 text-sm lang-vi hidden">Lông mày tự nhiên, làm nổi bật đường nét khuôn mặt</p>
+<p class="text-gray-600 text-sm lang-en hidden">Natural, dimensional brows that enhance facial features</p>
+</div>
+</div>
+<div class="overflow-hidden rounded-lg shadow-md">
+<img src="" alt="唇部美化前後對比" class="w-full h-64 object-cover object-top">
+<div class="p-4">
+<h3 class="font-bold text-lg mb-1 lang-zh">唇部美化</h3>
+<h3 class="font-bold text-lg mb-1 lang-vi hidden">Phun Môi</h3>
+<h3 class="font-bold text-lg mb-1 lang-en hidden">Lip Enhancement</h3>
+<p class="text-gray-600 text-sm lang-zh">自然豐潤的唇色，打造迷人笑容</p>
+<p class="text-gray-600 text-sm lang-vi hidden">Màu môi tự nhiên, tạo nụ cười quyến rũ</p>
+<p class="text-gray-600 text-sm lang-en hidden">Natural lip color for a captivating smile</p>
+</div>
+</div>
+<div class="overflow-hidden rounded-lg shadow-md">
+<img src="" alt="眼線定妝前後對比" class="w-full h-64 object-cover object-top">
+<div class="p-4">
+<h3 class="font-bold text-lg mb-1 lang-zh">眼線定妝</h3>
+<h3 class="font-bold text-lg mb-1 lang-vi hidden">Phun Mí</h3>
+<h3 class="font-bold text-lg mb-1 lang-en hidden">Eyeliner Enhancement</h3>
+<p class="text-gray-600 text-sm lang-zh">精細的眼線設計，讓眼神更加深邃</p>
+<p class="text-gray-600 text-sm lang-vi hidden">Đường viền mắt tinh tế, tạo ánh nhìn sâu lắng</p>
+<p class="text-gray-600 text-sm lang-en hidden">Precise eyeliner for a deeper, more defined gaze</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold mb-2 lang-zh">客戶評價</h2>
+<h2 class="text-3xl font-bold mb-2 lang-vi hidden">Đánh Giá Từ Khách Hàng</h2>
+<h2 class="text-3xl font-bold mb-2 lang-en hidden">Client Testimonials</h2>
+<p class="text-gray-600 max-w-2xl mx-auto lang-zh">聽聽我們的客戶怎麼說，他們的真實體驗和感受</p>
+<p class="text-gray-600 max-w-2xl mx-auto lang-vi hidden">Lắng nghe những chia sẻ từ khách hàng về trải nghiệm thực tế với dịch vụ của chúng tôi</p>
+<p class="text-gray-600 max-w-2xl mx-auto lang-en hidden">Hear what our clients have to say about their experiences with our services</p>
+</div>
+<div class="testimonial-slider">
+<div class="slide-track">
+<div class="bg-white p-6 rounded-lg shadow-md mx-3 w-[280px] flex-shrink-0">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-3">
+<span class="text-primary font-bold">LT</span>
+</div>
+<div>
+<h4 class="font-bold lang-zh">林婷婷</h4>
+<h4 class="font-bold lang-vi hidden">Lâm Đình Đình</h4>
+<h4 class="font-bold lang-en hidden">Lin Tingting</h4>
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-600 lang-zh">"Angela的眉毛塑形技術非常精湛，完全符合我的臉型，非常自然。服務態度也很好，讓人感到舒適放鬆。"</p>
+<p class="text-gray-600 lang-vi hidden">"Kỹ thuật xăm mày của Angela rất tinh xảo, hoàn toàn phù hợp với khuôn mặt của tôi, rất tự nhiên. Thái độ phục vụ cũng rất tốt, khiến người ta cảm thấy thoải mái."</p>
+<p class="text-gray-600 lang-en hidden">"Angela's eyebrow microblading technique is excellent, perfectly suited to my face shape and very natural. Her service attitude is also great, making me feel comfortable and relaxed."</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md mx-3 w-[280px] flex-shrink-0">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-3">
+<span class="text-primary font-bold">WY</span>
+</div>
+<div>
+<h4 class="font-bold lang-zh">王雅芳</h4>
+<h4 class="font-bold lang-vi hidden">Vương Nhã Phương</h4>
+<h4 class="font-bold lang-en hidden">Wang Yafang</h4>
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-600 lang-zh">"做了唇部美化後，整個人氣色都變好了！顏色非常自然，不誇張，很適合日常。而且Angela很專業，解釋得很詳細。"</p>
+<p class="text-gray-600 lang-vi hidden">"Sau khi phun môi, cả người tôi trông rạng rỡ hơn! Màu sắc rất tự nhiên, không quá lố, rất phù hợp cho hàng ngày. Angela rất chuyên nghiệp, giải thích rất chi tiết."</p>
+<p class="text-gray-600 lang-en hidden">"After lip enhancement, my whole appearance improved! The color is very natural, not exaggerated, perfect for daily wear. Angela is very professional and explained everything in detail."</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md mx-3 w-[280px] flex-shrink-0">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-3">
+<span class="text-primary font-bold">CL</span>
+</div>
+<div>
+<h4 class="font-bold lang-zh">陳麗華</h4>
+<h4 class="font-bold lang-vi hidden">Trần Lệ Hoa</h4>
+<h4 class="font-bold lang-en hidden">Chen Lihua</h4>
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-600 lang-zh">"眼線定妝效果超出預期，讓我的眼睛看起來更大更有神，而且不化妝也很好看。店內環境乾淨舒適，推薦給大家！"</p>
+<p class="text-gray-600 lang-vi hidden">"Hiệu quả phun mí vượt quá mong đợi, làm cho đôi mắt tôi trông to hơn và sắc sảo hơn, ngay cả khi không trang điểm cũng rất đẹp. Môi trường cửa hàng sạch sẽ và thoải mái, tôi khuyên mọi người nên thử!"</p>
+<p class="text-gray-600 lang-en hidden">"The eyeliner enhancement exceeded my expectations, making my eyes look bigger and more defined, even without makeup. The salon environment is clean and comfortable. Highly recommended!"</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md mx-3 w-[280px] flex-shrink-0">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-3">
+<span class="text-primary font-bold">ZM</span>
+</div>
+<div>
+<h4 class="font-bold lang-zh">張美玲</h4>
+<h4 class="font-bold lang-vi hidden">Trương Mỹ Linh</h4>
+<h4 class="font-bold lang-en hidden">Zhang Meiling</h4>
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-600 lang-zh">"髮際線調整讓我的臉型看起來更加和諧，Angela非常注重細節，效果非常自然，沒有人發現我做了調整，但都說我變漂亮了！"</p>
+<p class="text-gray-600 lang-vi hidden">"Điều chỉnh đường chân tóc giúp khuôn mặt tôi trông hài hòa hơn, Angela rất chú ý đến từng chi tiết, hiệu quả rất tự nhiên, không ai phát hiện ra tôi đã làm điều chỉnh, nhưng đều nói tôi đẹp hơn!"</p>
+<p class="text-gray-600 lang-en hidden">"The hairline adjustment made my face look more harmonious. Angela pays great attention to detail, and the result is very natural. No one noticed I had it done, but everyone says I look prettier!"</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md mx-3 w-[280px] flex-shrink-0">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-3">
+<span class="text-primary font-bold">HS</span>
+</div>
+<div>
+<h4 class="font-bold lang-zh">黃思穎</h4>
+<h4 class="font-bold lang-vi hidden">Hoàng Tư Doanh</h4>
+<h4 class="font-bold lang-en hidden">Huang Siying</h4>
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-600 lang-zh">"睫毛嫁接讓我省去了每天化妝的時間，效果持久又自然。Angela的技術真的很好，而且很耐心地解答我所有問題。"</p>
+<p class="text-gray-600 lang-vi hidden">"Nối mi giúp tôi tiết kiệm thời gian trang điểm mỗi ngày, hiệu quả lâu dài và tự nhiên. Kỹ thuật của Angela thực sự rất tốt, và cô ấy rất kiên nhẫn trả lời tất cả câu hỏi của tôi."</p>
+<p class="text-gray-600 lang-en hidden">"Eyelash extensions saved me daily makeup time, with long-lasting and natural results. Angela's technique is really good, and she patiently answered all my questions."</p>
+</div>
+<!-- Duplicate slides for infinite loop -->
+<div class="bg-white p-6 rounded-lg shadow-md mx-3 w-[280px] flex-shrink-0">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-3">
+<span class="text-primary font-bold">LT</span>
+</div>
+<div>
+<h4 class="font-bold lang-zh">林婷婷</h4>
+<h4 class="font-bold lang-vi hidden">Lâm Đình Đình</h4>
+<h4 class="font-bold lang-en hidden">Lin Tingting</h4>
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-600 lang-zh">"Angela的眉毛塑形技術非常精湛，完全符合我的臉型，非常自然。服務態度也很好，讓人感到舒適放鬆。"</p>
+<p class="text-gray-600 lang-vi hidden">"Kỹ thuật xăm mày của Angela rất tinh xảo, hoàn toàn phù hợp với khuôn mặt của tôi, rất tự nhiên. Thái độ phục vụ cũng rất tốt, khiến người ta cảm thấy thoải mái."</p>
+<p class="text-gray-600 lang-en hidden">"Angela's eyebrow microblading technique is excellent, perfectly suited to my face shape and very natural. Her service attitude is also great, making me feel comfortable and relaxed."</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md mx-3 w-[280px] flex-shrink-0">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-3">
+<span class="text-primary font-bold">WY</span>
+</div>
+<div>
+<h4 class="font-bold lang-zh">王雅芳</h4>
+<h4 class="font-bold lang-vi hidden">Vương Nhã Phương</h4>
+<h4 class="font-bold lang-en hidden">Wang Yafang</h4>
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-600 lang-zh">"做了唇部美化後，整個人氣色都變好了！顏色非常自然，不誇張，很適合日常。而且Angela很專業，解釋得很詳細。"</p>
+<p class="text-gray-600 lang-vi hidden">"Sau khi phun môi, cả người tôi trông rạng rỡ hơn! Màu sắc rất tự nhiên, không quá lố, rất phù hợp cho hàng ngày. Angela rất chuyên nghiệp, giải thích rất chi tiết."</p>
+<p class="text-gray-600 lang-en hidden">"After lip enhancement, my whole appearance improved! The color is very natural, not exaggerated, perfect for daily wear. Angela is very professional and explained everything in detail."</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md mx-3 w-[280px] flex-shrink-0">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-3">
+<span class="text-primary font-bold">CL</span>
+</div>
+<div>
+<h4 class="font-bold lang-zh">陳麗華</h4>
+<h4 class="font-bold lang-vi hidden">Trần Lệ Hoa</h4>
+<h4 class="font-bold lang-en hidden">Chen Lihua</h4>
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-600 lang-zh">"眼線定妝效果超出預期，讓我的眼睛看起來更大更有神，而且不化妝也很好看。店內環境乾淨舒適，推薦給大家！"</p>
+<p class="text-gray-600 lang-vi hidden">"Hiệu quả phun mí vượt quá mong đợi, làm cho đôi mắt tôi trông to hơn và sắc sảo hơn, ngay cả khi không trang điểm cũng rất đẹp. Môi trường cửa hàng sạch sẽ và thoải mái, tôi khuyên mọi người nên thử!"</p>
+<p class="text-gray-600 lang-en hidden">"The eyeliner enhancement exceeded my expectations, making my eyes look bigger and more defined, even without makeup. The salon environment is clean and comfortable. Highly recommended!"</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md mx-3 w-[280px] flex-shrink-0">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-3">
+<span class="text-primary font-bold">ZM</span>
+</div>
+<div>
+<h4 class="font-bold lang-zh">張美玲</h4>
+<h4 class="font-bold lang-vi hidden">Trương Mỹ Linh</h4>
+<h4 class="font-bold lang-en hidden">Zhang Meiling</h4>
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-600 lang-zh">"髮際線調整讓我的臉型看起來更加和諧，Angela非常注重細節，效果非常自然，沒有人發現我做了調整，但都說我變漂亮了！"</p>
+<p class="text-gray-600 lang-vi hidden">"Điều chỉnh đường chân tóc giúp khuôn mặt tôi trông hài hòa hơn, Angela rất chú ý đến từng chi tiết, hiệu quả rất tự nhiên, không ai phát hiện ra tôi đã làm điều chỉnh, nhưng đều nói tôi đẹp hơn!"</p>
+<p class="text-gray-600 lang-en hidden">"The hairline adjustment made my face look more harmonious. Angela pays great attention to detail, and the result is very natural. No one noticed I had it done, but everyone says I look prettier!"</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md mx-3 w-[280px] flex-shrink-0">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-3">
+<span class="text-primary font-bold">HS</span>
+</div>
+<div>
+<h4 class="font-bold lang-zh">黃思穎</h4>
+<h4 class="font-bold lang-vi hidden">Hoàng Tư Doanh</h4>
+<h4 class="font-bold lang-en hidden">Huang Siying</h4>
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-600 lang-zh">"睫毛嫁接讓我省去了每天化妝的時間，效果持久又自然。Angela的技術真的很好，而且很耐心地解答我所有問題。"</p>
+<p class="text-gray-600 lang-vi hidden">"Nối mi giúp tôi tiết kiệm thời gian trang điểm mỗi ngày, hiệu quả lâu dài và tự nhiên. Kỹ thuật của Angela thực sự rất tốt, và cô ấy rất kiên nhẫn trả lời tất cả câu hỏi của tôi."</p>
+<p class="text-gray-600 lang-en hidden">"Eyelash extensions saved me daily makeup time, with long-lasting and natural results. Angela's technique is really good, and she patiently answered all my questions."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="about" class="py-16">
+<div class="container mx-auto px-4">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="w-full">
+<img src="" alt="Angela Young" class="w-full h-auto rounded-lg shadow-lg">
+</div>
+<div class="w-full">
+<h2 class="text-3xl font-bold mb-4 lang-zh">關於 Angela Young</h2>
+<h2 class="text-3xl font-bold mb-4 lang-vi hidden">Về Angela Young</h2>
+<h2 class="text-3xl font-bold mb-4 lang-en hidden">About Angela Young</h2>
+<p class="text-gray-600 mb-4 lang-zh">Angela Young 擁有超過10年的半永久定妝經驗，曾在韓國、日本等地進修學習最新技術。她以精湛的技藝和對細節的專注而聞名，為每位客戶量身定制最適合的美麗方案。</p>
+<p class="text-gray-600 mb-4 lang-vi hidden">Angela Young có hơn 10 năm kinh nghiệm trong lĩnh vực phun xăm thẩm mỹ, từng tu nghiệp tại Hàn Quốc, Nhật Bản để học hỏi các kỹ thuật mới nhất. Cô nổi tiếng với tay nghề tinh xảo và sự tập trung vào từng chi tiết, tạo ra phương án làm đẹp phù hợp nhất cho từng khách hàng.</p>
+<p class="text-gray-600 mb-4 lang-en hidden">Angela Young has over 10 years of experience in semi-permanent makeup, having studied the latest techniques in Korea and Japan. She is known for her exquisite craftsmanship and attention to detail, creating customized beauty solutions for each client.</p>
+<p class="text-gray-600 mb-4 lang-zh">在Angela Young半永久定妝工作室，我們使用最高品質的材料和設備，確保每位客戶都能獲得安全、自然且持久的效果。我們的理念是「提升自然美，而非改變」，讓您在節省日常化妝時間的同時，保持最真實的自己。</p>
+<p class="text-gray-600 mb-4 lang-vi hidden">Tại studio Angela Young, chúng tôi sử dụng vật liệu và thiết bị chất lượng cao nhất, đảm bảo mỗi khách hàng đều nhận được kết quả an toàn, tự nhiên và lâu dài. Triết lý của chúng tôi là "Nâng cao vẻ đẹp tự nhiên, không thay đổi", giúp bạn tiết kiệm thời gian trang điểm hàng ngày trong khi vẫn giữ được vẻ đẹp chân thật nhất của mình.</p>
+<p class="text-gray-600 mb-4 lang-en hidden">At Angela Young Studio, we use the highest quality materials and equipment to ensure each client receives safe, natural, and long-lasting results. Our philosophy is "Enhance natural beauty, not change it," allowing you to save daily makeup time while maintaining your most authentic self.</p>
+<div class="flex flex-wrap gap-4 mt-6">
+<div class="flex items-center">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-3">
+<i class="ri-award-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-bold lang-zh">專業認證</h4>
+<h4 class="font-bold lang-vi hidden">Chứng Nhận Chuyên Môn</h4>
+<h4 class="font-bold lang-en hidden">Certified Professional</h4>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-3">
+<i class="ri-heart-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-bold lang-zh">客戶滿意度高</h4>
+<h4 class="font-bold lang-vi hidden">Độ Hài Lòng Cao</h4>
+<h4 class="font-bold lang-en hidden">High Client Satisfaction</h4>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-3">
+<i class="ri-shield-check-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-bold lang-zh">安全衛生保障</h4>
+<h4 class="font-bold lang-vi hidden">Đảm Bảo An Toàn</h4>
+<h4 class="font-bold lang-en hidden">Safety Guaranteed</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="contact" class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold mb-2 lang-zh">聯絡我們</h2>
+<h2 class="text-3xl font-bold mb-2 lang-vi hidden">Liên Hệ</h2>
+<h2 class="text-3xl font-bold mb-2 lang-en hidden">Contact Us</h2>
+<p class="text-gray-600 max-w-2xl mx-auto lang-zh">預約諮詢或了解更多服務詳情，請透過以下方式聯絡我們</p>
+<p class="text-gray-600 max-w-2xl mx-auto lang-vi hidden">Để đặt lịch tư vấn hoặc tìm hiểu thêm về dịch vụ, vui lòng liên hệ với chúng tôi qua các phương thức sau</p>
+<p class="text-gray-600 max-w-2xl mx-auto lang-en hidden">To book a consultation or learn more about our services, please contact us through the following methods</p>
+</div>
+<div class="flex flex-col md:flex-row gap-8">
+<div class="w-full">
+<div class="bg-white p-8 rounded-lg shadow-md mb-8">
+<h3 class="text-xl font-bold mb-6 lang-zh">聯絡資訊</h3>
+<h3 class="text-xl font-bold mb-6 lang-vi hidden">Thông Tin Liên Hệ</h3>
+<h3 class="text-xl font-bold mb-6 lang-en hidden">Contact Information</h3>
+<div class="flex items-start mb-4">
+<div class="w-10 h-10 flex items-center justify-center mr-3 mt-1">
+<i class="ri-map-pin-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-bold mb-1 lang-zh">地址</h4>
+<h4 class="font-bold mb-1 lang-vi hidden">Địa chỉ</h4>
+<h4 class="font-bold mb-1 lang-en hidden">Address</h4>
+<p class="text-gray-600">台北市信義區松高路9號</p>
+</div>
+</div>
+<div class="flex items-start mb-4">
+<div class="w-10 h-10 flex items-center justify-center mr-3 mt-1">
+<i class="ri-phone-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-bold mb-1 lang-zh">電話</h4>
+<h4 class="font-bold mb-1 lang-vi hidden">Điện thoại</h4>
+<h4 class="font-bold mb-1 lang-en hidden">Phone</h4>
+<p class="text-gray-600">0923 393 066</p>
+</div>
+</div>
+<div class="flex items-start mb-4">
+<div class="w-10 h-10 flex items-center justify-center mr-3 mt-1">
+<i class="ri-mail-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-bold mb-1 lang-zh">電子郵件</h4>
+<h4 class="font-bold mb-1 lang-vi hidden">Email</h4>
+<h4 class="font-bold mb-1 lang-en hidden">Email</h4>
+<p class="text-gray-600">contact@angelayoung.com</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center mr-3 mt-1">
+<i class="ri-time-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-bold mb-1 lang-zh">營業時間</h4>
+<h4 class="font-bold mb-1 lang-vi hidden">Giờ làm việc</h4>
+<h4 class="font-bold mb-1 lang-en hidden">Business Hours</h4>
+<p class="text-gray-600 lang-zh">週一至週六: 10:00 - 19:00</p>
+<p class="text-gray-600 lang-zh">週日: 預約制</p>
+<p class="text-gray-600 lang-vi hidden">Thứ 2 - Thứ 7: 10:00 - 19:00</p>
+<p class="text-gray-600 lang-vi hidden">Chủ nhật: Theo lịch hẹn</p>
+<p class="text-gray-600 lang-en hidden">Monday - Saturday: 10:00 - 19:00</p>
+<p class="text-gray-600 lang-en hidden">Sunday: By appointment</p>
+</div>
+</div>
+</div>
+<div class="rounded-lg overflow-hidden shadow-md h-[300px]">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.6926133430313!2d121.56485257602636!3d25.03644897781553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb6da80a7ad%3A0xacc4d11dc963103c!2z5Y-w5YyX5biC5L-h576p5Y2A5p2-6auY6LevOeiZn-W-qeS6i-S4reW_gw!5e0!3m2!1szh-TW!2stw!4v1687440482303!5m2!1szh-TW!2stw" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-gray-800 text-white py-12">
+<div class="container mx-auto px-4">
+<div class="flex flex-col md:flex-row justify-between mb-8">
+<div class="mb-8 md:mb-0">
+<h3 class="text-2xl font-['Pacifico'] mb-4">Angela Young</h3>
+<p class="text-gray-400 max-w-xs lang-zh">專業半永久定妝服務，讓您每天都能展現最美的自己</p>
+<p class="text-gray-400 max-w-xs lang-vi hidden">Dịch vụ phun xăm thẩm mỹ chuyên nghiệp, giúp bạn luôn xinh đẹp mỗi ngày</p>
+<p class="text-gray-400 max-w-xs lang-en hidden">Professional semi-permanent makeup services to help you look your best every day</p>
+<div class="mt-6 space-y-2">
+<div class="flex items-center">
+<i class="ri-map-pin-line text-primary mr-3"></i>
+<p class="text-gray-400 lang-zh">台北市信義區松高路9號</p>
+<p class="text-gray-400 lang-vi hidden">Số 9 Đường Tùng Cao, Quận Tín Nghĩa, Đài Bắc</p>
+<p class="text-gray-400 lang-en hidden">No. 9, Songgao Road, Xinyi District, Taipei</p>
+</div>
+<div class="flex items-center">
+<i class="ri-phone-line text-primary mr-3"></i>
+<p class="text-gray-400">0923 393 066</p>
+</div>
+<div class="flex items-center">
+<i class="ri-time-line text-primary mr-3"></i>
+<div>
+<p class="text-gray-400 lang-zh">週一至週六: 10:00 - 19:00</p>
+<p class="text-gray-400 lang-zh">週日: 預約制</p>
+<p class="text-gray-400 lang-vi hidden">Thứ 2 - Thứ 7: 10:00 - 19:00</p>
+<p class="text-gray-400 lang-vi hidden">Chủ nhật: Theo lịch hẹn</p>
+<p class="text-gray-400 lang-en hidden">Mon - Sat: 10:00 - 19:00</p>
+<p class="text-gray-400 lang-en hidden">Sun: By appointment</p>
+</div>
+</div>
+<div class="flex items-center">
+<i class="ri-mail-line text-primary mr-3"></i>
+<p class="text-gray-400">contact@angelayoung.com</p>
+</div>
+</div>
+<div class="mt-6 flex space-x-4">
+<a href="#" class="text-gray-400 hover:text-primary transition-colors">
+<i class="ri-facebook-fill ri-lg"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-primary transition-colors">
+<i class="ri-instagram-fill ri-lg"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-primary transition-colors">
+<i class="ri-line-fill ri-lg"></i>
+</a>
+</div>
+</div>
+<div class="mb-8 md:mb-0">
+<h4 class="text-lg font-bold mb-4 lang-zh">快速連結</h4>
+<h4 class="text-lg font-bold mb-4 lang-vi hidden">Liên Kết Nhanh</h4>
+<h4 class="text-lg font-bold mb-4 lang-en hidden">Quick Links</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors lang-zh">首頁</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors lang-vi hidden">Trang chủ</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors lang-en hidden">Home</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-white transition-colors lang-zh">服務項目</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-white transition-colors lang-vi hidden">Dịch vụ</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-white transition-colors lang-en hidden">Services</a></li>
+<li><a href="#about" class="text-gray-400 hover:text-white transition-colors lang-zh">關於我們</a></li>
+<li><a href="#about" class="text-gray-400 hover:text-white transition-colors lang-vi hidden">Về chúng tôi</a></li>
+<li><a href="#about" class="text-gray-400 hover:text-white transition-colors lang-en hidden">About Us</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-colors lang-zh">聯絡我們</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-colors lang-vi hidden">Liên hệ</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-colors lang-en hidden">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-4 lang-zh">關注我們</h4>
+<h4 class="text-lg font-bold mb-4 lang-vi hidden">Theo Dõi Chúng Tôi</h4>
+<h4 class="text-lg font-bold mb-4 lang-en hidden">Follow Us</h4>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-facebook-fill ri-lg"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-instagram-fill ri-lg"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-line-fill ri-lg"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-700 text-center text-gray-400">
+<p class="lang-zh">&copy; 2025 Angela Young 半永久定妝 | 營業登記證號: 12345678 | 衛生署核准字號: AB-12345</p>
+<p class="lang-vi hidden">&copy; 2025 Angela Young Phun Xăm Thẩm Mỹ | Giấy phép kinh doanh: 12345678 | Giấy phép y tế: AB-12345</p>
+<p class="lang-en hidden">&copy; 2025 Angela Young Semi-Permanent Makeup | Business License: 12345678 | Health License: AB-12345</p>
+</div>
+</div>
+</footer>
+<!-- Price List Modal -->
+<div id="price-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+<div class="bg-white rounded-lg max-w-4xl w-full max-h-[80vh] overflow-y-auto">
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-2xl font-bold lang-zh">服務價格表</h3>
+<h3 class="text-2xl font-bold lang-vi hidden">Bảng Giá Dịch Vụ</h3>
+<h3 class="text-2xl font-bold lang-en hidden">Service Price List</h3>
+<button id="close-price-modal" class="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700">
+<i class="ri-close-line ri-lg"></i>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<h4 class="text-lg font-bold mb-3 text-primary lang-zh">眉部服務</h4>
+<h4 class="text-lg font-bold mb-3 text-primary lang-vi hidden">Dịch Vụ Lông Mày</h4>
+<h4 class="text-lg font-bold mb-3 text-primary lang-en hidden">Eyebrow Services</h4>
+<div class="space-y-2">
+<div class="flex justify-between items-center py-2 border-b">
+<span>3D飄眉 / Phun Mày 3D / 3D Microblading</span>
+<span class="font-bold">NT$ 8,800</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b">
+<span>6D飄眉 / Phun Mày 6D / 6D Microblading</span>
+<span class="font-bold">NT$ 12,800</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b">
+<span>霧眉 / Phun Mày Khói / Powder Brows</span>
+<span class="font-bold">NT$ 10,800</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b">
+<span>補色 / Tái Khắc / Touch-up</span>
+<span class="font-bold">NT$ 4,800</span>
+</div>
+</div>
+<h4 class="text-lg font-bold mb-3 mt-6 text-primary lang-zh">唇部服務</h4>
+<h4 class="text-lg font-bold mb-3 mt-6 text-primary lang-vi hidden">Dịch Vụ Môi</h4>
+<h4 class="text-lg font-bold mb-3 mt-6 text-primary lang-en hidden">Lip Services</h4>
+<div class="space-y-2">
+<div class="flex justify-between items-center py-2 border-b">
+<span>水晶唇 / Phun Môi Tinh Thể / Crystal Lips</span>
+<span class="font-bold">NT$ 15,800</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b">
+<span>漸層唇 / Phun Môi Ombre / Ombre Lips</span>
+<span class="font-bold">NT$ 13,800</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b">
+<span>裸唇 / Phun Môi Tự Nhiên / Natural Lips</span>
+<span class="font-bold">NT$ 12,800</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b">
+<span>補色 / Tái Khắc / Touch-up</span>
+<span class="font-bold">NT$ 5,800</span>
+</div>
+</div>
+<h4 class="text-lg font-bold mb-3 mt-6 text-primary lang-zh">眼線服務</h4>
+<h4 class="text-lg font-bold mb-3 mt-6 text-primary lang-vi hidden">Dịch Vụ Mí Mắt</h4>
+<h4 class="text-lg font-bold mb-3 mt-6 text-primary lang-en hidden">Eyeliner Services</h4>
+<div class="space-y-2">
+<div class="flex justify-between items-center py-2 border-b">
+<span>內眼線 / Phun Mí Trong / Inner Eyeliner</span>
+<span class="font-bold">NT$ 6,800</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b">
+<span>上眼線 / Phun Mí Trên / Upper Eyeliner</span>
+<span class="font-bold">NT$ 8,800</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b">
+<span>下眼線 / Phun Mí Dưới / Lower Eyeliner</span>
+<span class="font-bold">NT$ 6,800</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b">
+<span>補色 / Tái Khắc / Touch-up</span>
+<span class="font-bold">NT$ 3,800</span>
+</div>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-3 text-primary lang-zh">睫毛服務</h4>
+<h4 class="text-lg font-bold mb-3 text-primary lang-vi hidden">Dịch Vụ Mi</h4>
+<h4 class="text-lg font-bold mb-3 text-primary lang-en hidden">Eyelash Services</h4>
+<div class="space-y-2">
+<div class="flex justify-between items-center py-2 border-b">
+<span>單根嫁接 / Nối Mi Classic / Classic Extensions</span>
+<span class="font-bold">NT$ 2,500</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b">
+<span>濃密款 / Nối Mi 6D / Volume Extensions</span>
+<span class="font-bold">NT$ 3,500</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b">
+<span>補睫毛 / Bổ Sung / Fill-in</span>
+<span class="font-bold">NT$ 1,500</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b">
+<span>睫毛保養 / Bảo Dưỡng / Maintenance</span>
+<span class="font-bold">NT$ 800</span>
+</div>
+</div>
+<h4 class="text-lg font-bold mb-3 mt-6 text-primary lang-zh">髮際線服務</h4>
+<h4 class="text-lg font-bold mb-3 mt-6 text-primary lang-vi hidden">Dịch Vụ Chân Tóc</h4>
+<h4 class="text-lg font-bold mb-3 mt-6 text-primary lang-en hidden">Hairline Services</h4>
+<div class="space-y-2">
+<div class="flex justify-between items-center py-2 border-b">
+<span>髮際線調整 / Điều Chỉnh Chân Tóc / Hairline Adjustment</span>
+<span class="font-bold">NT$ 15,800</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b">
+<span>局部調整 / Điều Chỉnh Cục Bộ / Partial Adjustment</span>
+<span class="font-bold">NT$ 8,800</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b">
+<span>補色 / Tái Khắc / Touch-up</span>
+<span class="font-bold">NT$ 6,800</span>
+</div>
+</div>
+<h4 class="text-lg font-bold mb-3 mt-6 text-primary lang-zh">其他服務</h4>
+<h4 class="text-lg font-bold mb-3 mt-6 text-primary lang-vi hidden">Dịch Vụ Khác</h4>
+<h4 class="text-lg font-bold mb-3 mt-6 text-primary lang-en hidden">Other Services</h4>
+<div class="space-y-2">
+<div class="flex justify-between items-center py-2 border-b">
+<span>除舊色 / Xóa Xăm / Removal</span>
+<span class="font-bold">NT$ 3,800</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b">
+<span>諮詢服務 / Tư Vấn / Consultation</span>
+<span class="font-bold">免費 / Miễn Phí / Free</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-6 text-center">
+<p class="text-sm text-gray-500 mb-4 lang-zh">以上價格僅供參考，實際價格可能因個人需求而有所調整</p>
+<p class="text-sm text-gray-500 mb-4 lang-vi hidden">Giá trên chỉ mang tính tham khảo, giá thực tế có thể thay đổi tùy theo nhu cầu cá nhân</p>
+<p class="text-sm text-gray-500 mb-4 lang-en hidden">Prices are for reference only and may vary based on individual needs</p>
+<button id="close-price-modal-btn" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-button whitespace-nowrap lang-zh">關閉</button>
+<button id="close-price-modal-btn-vi" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-button whitespace-nowrap lang-vi hidden">Đóng</button>
+<button id="close-price-modal-btn-en" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-button whitespace-nowrap lang-en hidden">Close</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Service Detail Modal -->
+<div id="service-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+<div class="bg-white rounded-lg max-w-3xl w-full max-h-[80vh] overflow-y-auto">
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<h3 id="modal-title" class="text-2xl font-bold"></h3>
+<button id="close-modal" class="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700">
+<i class="ri-close-line ri-lg"></i>
+</button>
+</div>
+<div id="modal-content"></div>
+<div class="mt-6 text-center">
+<button id="close-modal-btn" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-button whitespace-nowrap lang-zh">關閉</button>
+<button id="close-modal-btn-vi" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-button whitespace-nowrap lang-vi hidden">Đóng</button>
+<button id="close-modal-btn-en" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-button whitespace-nowrap lang-en hidden">Close</button>
+</div>
+</div>
+</div>
+</div>
+<script id="mobile-menu-script">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuButton.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+});
+// Close mobile menu when clicking on a link
+const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+mobileMenuLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.add('hidden');
+});
+});
+});
+</script>
+<script id="language-switcher-script">
+document.addEventListener('DOMContentLoaded', function() {
+const langButtons = {
+zh: document.getElementById('lang-zh'),
+vi: document.getElementById('lang-vi'),
+en: document.getElementById('lang-en')
+};
+const langElements = {
+zh: document.querySelectorAll('.lang-zh'),
+vi: document.querySelectorAll('.lang-vi'),
+en: document.querySelectorAll('.lang-en')
+};
+function switchLanguage(lang) {
+// Hide all language elements
+Object.keys(langElements).forEach(key => {
+langElements[key].forEach(el => {
+el.classList.add('hidden');
+});
+langButtons[key].classList.remove('language-active');
+});
+// Show selected language elements
+langElements[lang].forEach(el => {
+el.classList.remove('hidden');
+});
+langButtons[lang].classList.add('language-active');
+// Store language preference
+localStorage.setItem('preferredLanguage', lang);
+}
+// Set event listeners for language buttons
+Object.keys(langButtons).forEach(lang => {
+langButtons[lang].addEventListener('click', function() {
+switchLanguage(lang);
+});
+});
+// Check for stored language preference
+const storedLang = localStorage.getItem('preferredLanguage');
+if (storedLang && langButtons[storedLang]) {
+switchLanguage(storedLang);
+}
+});
+</script>
+<script id="price-modal-script">
+document.addEventListener('DOMContentLoaded', function() {
+const priceBtn = document.getElementById('price-btn');
+const priceBtnVi = document.getElementById('price-btn-vi');
+const priceBtnEn = document.getElementById('price-btn-en');
+const priceModal = document.getElementById('price-modal');
+const closePriceModal = document.getElementById('close-price-modal');
+const closePriceModalBtn = document.getElementById('close-price-modal-btn');
+const closePriceModalBtnVi = document.getElementById('close-price-modal-btn-vi');
+const closePriceModalBtnEn = document.getElementById('close-price-modal-btn-en');
+function openPriceModal() {
+priceModal.classList.remove('hidden');
+}
+function closePriceModalFn() {
+priceModal.classList.add('hidden');
+}
+[priceBtn, priceBtnVi, priceBtnEn].forEach(btn => {
+btn.addEventListener('click', openPriceModal);
+});
+[closePriceModal, closePriceModalBtn, closePriceModalBtnVi, closePriceModalBtnEn].forEach(btn => {
+btn.addEventListener('click', closePriceModalFn);
+});
+priceModal.addEventListener('click', function(e) {
+if (e.target === priceModal) {
+closePriceModalFn();
+}
+});
+document.addEventListener('keydown', function(e) {
+if (e.key === 'Escape' && !priceModal.classList.contains('hidden')) {
+closePriceModalFn();
+}
+});
+});
+</script>
+<script id="service-modal-script">
+document.addEventListener('DOMContentLoaded', function() {
+const serviceDetailBtns = document.querySelectorAll('.service-detail-btn');
+const serviceModal = document.getElementById('service-modal');
+const closeModalBtn = document.getElementById('close-modal');
+const closeModalBtnBottom = document.getElementById('close-modal-btn');
+const closeModalBtnBottomVi = document.getElementById('close-modal-btn-vi');
+const closeModalBtnBottomEn = document.getElementById('close-modal-btn-en');
+const modalTitle = document.getElementById('modal-title');
+const modalContent = document.getElementById('modal-content');
+const serviceDetails = {
+eyebrow: {
+zh: {
+title: '眉毛塑形',
+content: `
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<img src="" alt="眉毛塑形" class="w-full h-64 object-cover object-top rounded-lg">
+<div>
+<h4 class="text-xl font-bold mb-3">服務介紹</h4>
+<p class="text-gray-600 mb-4">眉毛塑形是一種半永久性的美容技術，通過精細的手工刺繡方式，在眉毛區域創造出逼真的毛髮效果，讓您擁有自然立體的眉形。</p>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>根據臉型量身定制眉形</p>
+</div>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>自然逼真的毛髮效果</p>
+</div>
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>持久效果，節省日常化妝時間</p>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<h4 class="text-xl font-bold mb-3">服務流程</h4>
+<ol class="space-y-3">
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">1</span>
+<div>
+<h5 class="font-bold">諮詢與設計</h5>
+<p class="text-gray-600">根據您的臉型、膚色和個人喜好，設計最適合的眉形</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">2</span>
+<div>
+<h5 class="font-bold">色料選擇</h5>
+<p class="text-gray-600">選擇最接近您自然眉毛顏色的色料，確保效果自然</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">3</span>
+<div>
+<h5 class="font-bold">施術過程</h5>
+<p class="text-gray-600">使用專業工具，精細地在眉毛區域創造出逼真的毛髮效果</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">4</span>
+<div>
+<h5 class="font-bold">修復與調整</h5>
+<p class="text-gray-600">約4-6週後進行修復調整，確保眉形完美</p>
+</div>
+</li>
+</ol>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-3">注意事項</h4>
+<ul class="space-y-2">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">施術後一週內避免沾水、使用化妝品和接觸強烈陽光</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">效果通常可維持1-3年，視個人皮膚狀況和保養方式而定</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">孕婦、哺乳期婦女、糖尿病患者、有皮膚過敏史者不建議進行此項服務</p>
+</li>
+</ul>
+</div>
+`
+},
+vi: {
+title: 'Xăm Mày',
+content: `
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<img src="" alt="Xăm Mày" class="w-full h-64 object-cover object-top rounded-lg">
+<div>
+<h4 class="text-xl font-bold mb-3">Giới Thiệu Dịch Vụ</h4>
+<p class="text-gray-600 mb-4">Xăm mày là kỹ thuật làm đẹp bán vĩnh viễn, tạo ra hiệu ứng sợi lông mày chân thực thông qua kỹ thuật thêu tay tinh xảo, giúp bạn có được dáng lông mày tự nhiên và sống động.</p>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Thiết kế dáng mày phù hợp với khuôn mặt</p>
+</div>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Hiệu ứng sợi lông mày chân thực</p>
+</div>
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Hiệu quả lâu dài, tiết kiệm thời gian trang điểm</p>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<h4 class="text-xl font-bold mb-3">Quy Trình Dịch Vụ</h4>
+<ol class="space-y-3">
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">1</span>
+<div>
+<h5 class="font-bold">Tư vấn và thiết kế</h5>
+<p class="text-gray-600">Thiết kế dáng mày phù hợp nhất dựa trên khuôn mặt, màu da và sở thích cá nhân của bạn</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">2</span>
+<div>
+<h5 class="font-bold">Lựa chọn màu sắc</h5>
+<p class="text-gray-600">Chọn màu sắc gần nhất với màu lông mày tự nhiên của bạn để đảm bảo hiệu quả tự nhiên</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">3</span>
+<div>
+<h5 class="font-bold">Quá trình thực hiện</h5>
+<p class="text-gray-600">Sử dụng công cụ chuyên nghiệp để tạo ra hiệu ứng sợi lông mày chân thực</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">4</span>
+<div>
+<h5 class="font-bold">Phục hồi và điều chỉnh</h5>
+<p class="text-gray-600">Sau 4-6 tuần sẽ tiến hành điều chỉnh để đảm bảo dáng mày hoàn hảo</p>
+</div>
+</li>
+</ol>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-3">Lưu Ý</h4>
+<ul class="space-y-2">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Tránh tiếp xúc với nước, mỹ phẩm và ánh nắng mạnh trong vòng một tuần sau khi thực hiện</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Hiệu quả thường kéo dài 1-3 năm, tùy thuộc vào tình trạng da và cách chăm sóc</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Không khuyến khích cho phụ nữ mang thai, đang cho con bú, người bị tiểu đường hoặc có tiền sử dị ứng da</p>
+</li>
+</ul>
+</div>
+`
+},
+en: {
+title: 'Eyebrow Microblading',
+content: `
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<img src="" alt="Eyebrow Microblading" class="w-full h-64 object-cover object-top rounded-lg">
+<div>
+<h4 class="text-xl font-bold mb-3">Service Introduction</h4>
+<p class="text-gray-600 mb-4">Eyebrow microblading is a semi-permanent beauty technique that creates realistic hair-like strokes in the eyebrow area through fine manual embroidery, giving you natural, dimensional brows.</p>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Customized eyebrow design based on face shape</p>
+</div>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Natural, realistic hair-like effect</p>
+</div>
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Long-lasting results, saving daily makeup time</p>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<h4 class="text-xl font-bold mb-3">Service Process</h4>
+<ol class="space-y-3">
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">1</span>
+<div>
+<h5 class="font-bold">Consultation & Design</h5>
+<p class="text-gray-600">Design the most suitable eyebrow shape based on your face shape, skin tone, and personal preferences</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">2</span>
+<div>
+<h5 class="font-bold">Color Selection</h5>
+<p class="text-gray-600">Select pigments closest to your natural eyebrow color to ensure natural results</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">3</span>
+<div>
+<h5 class="font-bold">Treatment Process</h5>
+<p class="text-gray-600">Use professional tools to create realistic hair-like strokes in the eyebrow area</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">4</span>
+<div>
+<h5 class="font-bold">Touch-up & Adjustment</h5>
+<p class="text-gray-600">After 4-6 weeks, a touch-up session ensures perfect eyebrow shape</p>
+</div>
+</li>
+</ol>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-3">Precautions</h4>
+<ul class="space-y-2">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Avoid water, cosmetics, and strong sunlight for one week after the procedure</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Results typically last 1-3 years, depending on skin condition and aftercare</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Not recommended for pregnant women, nursing mothers, diabetics, or those with a history of skin allergies</p>
+</li>
+</ul>
+</div>
+`
+}
+},
+lip: {
+zh: {
+title: '唇部美化',
+content: `
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<img src="" alt="唇部美化" class="w-full h-64 object-cover object-top rounded-lg">
+<div>
+<h4 class="text-xl font-bold mb-3">服務介紹</h4>
+<p class="text-gray-600 mb-4">唇部美化是一種半永久性的美容技術，通過精細的色料注入，增強唇部輪廓和顏色，讓您擁有自然豐潤的唇色，無需每天塗抹口紅。</p>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>增強唇部輪廓，修飾唇形</p>
+</div>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>自然豐潤的唇色效果</p>
+</div>
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>持久效果，省去每日塗抹口紅的時間</p>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<h4 class="text-xl font-bold mb-3">服務流程</h4>
+<ol class="space-y-3">
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">1</span>
+<div>
+<h5 class="font-bold">唇形設計</h5>
+<p class="text-gray-600">根據您的臉型和個人喜好，設計最適合的唇形和唇色</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">2</span>
+<div>
+<h5 class="font-bold">色料選擇</h5>
+<p class="text-gray-600">選擇最適合您膚色的唇色，確保效果自然</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">3</span>
+<div>
+<h5 class="font-bold">施術過程</h5>
+<p class="text-gray-600">使用專業工具，精細地注入色料，增強唇部輪廓和顏色</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">4</span>
+<div>
+<h5 class="font-bold">修復與調整</h5>
+<p class="text-gray-600">約4-6週後進行修復調整，確保唇色均勻完美</p>
+</div>
+</li>
+</ol>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-3">注意事項</h4>
+<ul class="space-y-2">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">施術後一週內避免食用辛辣食物、飲酒和接觸強烈陽光</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">效果通常可維持1-2年，視個人皮膚狀況和保養方式而定</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">孕婦、哺乳期婦女、有唇部皰疹史或皮膚過敏史者不建議進行此項服務</p>
+</li>
+</ul>
+</div>
+`
+},
+vi: {
+title: 'Phun Môi',
+content: `
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<img src="" alt="Phun Môi" class="w-full h-64 object-cover object-top rounded-lg">
+<div>
+<h4 class="text-xl font-bold mb-3">Giới Thiệu Dịch Vụ</h4>
+<p class="text-gray-600 mb-4">Phun môi là kỹ thuật làm đẹp bán vĩnh viễn, thông qua việc đưa sắc tố vào môi một cách tinh tế, làm nổi bật đường viền và màu sắc môi, giúp bạn có được màu môi tự nhiên mà không cần tô son mỗi ngày.</p>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Làm nổi bật đường viền môi, cải thiện hình dáng môi</p>
+</div>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Hiệu ứng màu môi tự nhiên</p>
+</div>
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Hiệu quả lâu dài, tiết kiệm thời gian tô son mỗi ngày</p>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<h4 class="text-xl font-bold mb-3">Quy Trình Dịch Vụ</h4>
+<ol class="space-y-3">
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">1</span>
+<div>
+<h5 class="font-bold">Thiết kế dáng môi</h5>
+<p class="text-gray-600">Thiết kế dáng môi và màu sắc phù hợp nhất dựa trên khuôn mặt và sở thích cá nhân của bạn</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">2</span>
+<div>
+<h5 class="font-bold">Lựa chọn màu sắc</h5>
+<p class="text-gray-600">Chọn màu môi phù hợp nhất với tông da của bạn để đảm bảo hiệu quả tự nhiên</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">3</span>
+<div>
+<h5 class="font-bold">Quá trình thực hiện</h5>
+<p class="text-gray-600">Sử dụng công cụ chuyên nghiệp để đưa sắc tố vào môi một cách tinh tế, làm nổi bật đường viền và màu sắc môi</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">4</span>
+<div>
+<h5 class="font-bold">Phục hồi và điều chỉnh</h5>
+<p class="text-gray-600">Sau 4-6 tuần sẽ tiến hành điều chỉnh để đảm bảo màu môi đều và hoàn hảo</p>
+</div>
+</li>
+</ol>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-3">Lưu Ý</h4>
+<ul class="space-y-2">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Tránh ăn đồ cay, uống rượu và tiếp xúc với ánh nắng mạnh trong vòng một tuần sau khi thực hiện</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Hiệu quả thường kéo dài 1-2 năm, tùy thuộc vào tình trạng da và cách chăm sóc</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Không khuyến khích cho phụ nữ mang thai, đang cho con bú, người có tiền sử mụn rộp ở môi hoặc dị ứng da</p>
+</li>
+</ul>
+</div>
+`
+},
+en: {
+title: 'Lip Enhancement',
+content: `
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<img src="" alt="Lip Enhancement" class="w-full h-64 object-cover object-top rounded-lg">
+<div>
+<h4 class="text-xl font-bold mb-3">Service Introduction</h4>
+<p class="text-gray-600 mb-4">Lip enhancement is a semi-permanent beauty technique that enhances lip contour and color through fine pigment application, giving you naturally fuller lips without the need for daily lipstick application.</p>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Enhances lip contour and shape</p>
+</div>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Natural, fuller lip color effect</p>
+</div>
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Long-lasting results, saving daily lipstick application time</p>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<h4 class="text-xl font-bold mb-3">Service Process</h4>
+<ol class="space-y-3">
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">1</span>
+<div>
+<h5 class="font-bold">Lip Design</h5>
+<p class="text-gray-600">Design the most suitable lip shape and color based on your face shape and personal preferences</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">2</span>
+<div>
+<h5 class="font-bold">Color Selection</h5>
+<p class="text-gray-600">Select lip colors that best complement your skin tone to ensure natural results</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">3</span>
+<div>
+<h5 class="font-bold">Treatment Process</h5>
+<p class="text-gray-600">Use professional tools to delicately apply pigments, enhancing lip contour and color</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">4</span>
+<div>
+<h5 class="font-bold">Touch-up & Adjustment</h5>
+<p class="text-gray-600">After 4-6 weeks, a touch-up session ensures even and perfect lip color</p>
+</div>
+</li>
+</ol>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-3">Precautions</h4>
+<ul class="space-y-2">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Avoid spicy foods, alcohol, and strong sunlight for one week after the procedure</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Results typically last 1-2 years, depending on skin condition and aftercare</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Not recommended for pregnant women, nursing mothers, those with a history of lip herpes, or skin allergies</p>
+</li>
+</ul>
+</div>
+`
+}
+},
+hairline: {
+zh: {
+title: '髮際線調整',
+content: `
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<img src="" alt="髮際線調整" class="w-full h-64 object-cover object-top rounded-lg">
+<div>
+<h4 class="text-xl font-bold mb-3">服務介紹</h4>
+<p class="text-gray-600 mb-4">髮際線調整是一種半永久性的美容技術，通過精細的色料注入，修飾髮際線，讓額頭比例更加和諧，展現年輕活力的外表。</p>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>修飾髮際線，改善額頭比例</p>
+</div>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>自然逼真的髮絲效果</p>
+</div>
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>持久效果，展現年輕活力</p>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<h4 class="text-xl font-bold mb-3">服務流程</h4>
+<ol class="space-y-3">
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">1</span>
+<div>
+<h5 class="font-bold">髮際線設計</h5>
+<p class="text-gray-600">根據您的臉型和個人需求，設計最適合的髮際線</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">2</span>
+<div>
+<h5 class="font-bold">色料選擇</h5>
+<p class="text-gray-600">選擇最接近您自然髮色的色料，確保效果自然</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">3</span>
+<div>
+<h5 class="font-bold">施術過程</h5>
+<p class="text-gray-600">使用專業工具，精細地在髮際線區域創造出逼真的髮絲效果</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">4</span>
+<div>
+<h5 class="font-bold">修復與調整</h5>
+<p class="text-gray-600">約4-6週後進行修復調整，確保效果自然完美</p>
+</div>
+</li>
+</ol>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-3">注意事項</h4>
+<ul class="space-y-2">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">施術後一週內避免洗頭、使用護髮產品和接觸強烈陽光</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">效果通常可維持1-3年，視個人皮膚狀況和保養方式而定</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">孕婦、哺乳期婦女、有頭皮問題或皮膚過敏史者不建議進行此項服務</p>
+</li>
+</ul>
+</div>
+`
+},
+vi: {
+title: 'Dặm Tóc',
+content: `
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<img src="" alt="Dặm Tóc" class="w-full h-64 object-cover object-top rounded-lg">
+<div>
+<h4 class="text-xl font-bold mb-3">Giới Thiệu Dịch Vụ</h4>
+<p class="text-gray-600 mb-4">Dặm tóc là kỹ thuật làm đẹp bán vĩnh viễn, thông qua việc đưa sắc tố vào đường chân tóc một cách tinh tế, điều chỉnh đường chân tóc, giúp cân đối tỷ lệ trán và tạo vẻ ngoài trẻ trung, năng động.</p>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Điều chỉnh đường chân tóc, cải thiện tỷ lệ trán</p>
+</div>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Hiệu ứng sợi tóc chân thực</p>
+</div>
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Hiệu quả lâu dài, tạo vẻ ngoài trẻ trung</p>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<h4 class="text-xl font-bold mb-3">Quy Trình Dịch Vụ</h4>
+<ol class="space-y-3">
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">1</span>
+<div>
+<h5 class="font-bold">Thiết kế đường chân tóc</h5>
+<p class="text-gray-600">Thiết kế đường chân tóc phù hợp nhất dựa trên khuôn mặt và nhu cầu cá nhân của bạn</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">2</span>
+<div>
+<h5 class="font-bold">Lựa chọn màu sắc</h5>
+<p class="text-gray-600">Chọn màu sắc gần nhất với màu tóc tự nhiên của bạn để đảm bảo hiệu quả tự nhiên</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">3</span>
+<div>
+<h5 class="font-bold">Quá trình thực hiện</h5>
+<p class="text-gray-600">Sử dụng công cụ chuyên nghiệp để tạo ra hiệu ứng sợi tóc chân thực trong khu vực đường chân tóc</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">4</span>
+<div>
+<h5 class="font-bold">Phục hồi và điều chỉnh</h5>
+<p class="text-gray-600">Sau 4-6 tuần sẽ tiến hành điều chỉnh để đảm bảo hiệu quả tự nhiên và hoàn hảo</p>
+</div>
+</li>
+</ol>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-3">Lưu Ý</h4>
+<ul class="space-y-2">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Tránh gội đầu, sử dụng các sản phẩm chăm sóc tóc và tiếp xúc với ánh nắng mạnh trong vòng một tuần sau khi thực hiện</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Hiệu quả thường kéo dài 1-3 năm, tùy thuộc vào tình trạng da và cách chăm sóc</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Không khuyến khích cho phụ nữ mang thai, đang cho con bú, người có vấn đề về da đầu hoặc có tiền sử dị ứng da</p>
+</li>
+</ul>
+</div>
+`
+},
+en: {
+title: 'Hairline Enhancement',
+content: `
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<img src="" alt="Hairline Enhancement" class="w-full h-64 object-cover object-top rounded-lg">
+<div>
+<h4 class="text-xl font-bold mb-3">Service Introduction</h4>
+<p class="text-gray-600 mb-4">Hairline enhancement is a semi-permanent beauty technique that refines the hairline through fine pigment application, creating more harmonious forehead proportions and a youthful, vibrant appearance.</p>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Refines hairline and improves forehead proportions</p>
+</div>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Natural, realistic hair-like effect</p>
+</div>
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Long-lasting results for a more youthful appearance</p>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<h4 class="text-xl font-bold mb-3">Service Process</h4>
+<ol class="space-y-3">
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">1</span>
+<div>
+<h5 class="font-bold">Hairline Design</h5>
+<p class="text-gray-600">Design the most suitable hairline based on your face shape and personal needs</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">2</span>
+<div>
+<h5 class="font-bold">Color Selection</h5>
+<p class="text-gray-600">Select pigments closest to your natural hair color to ensure natural results</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">3</span>
+<div>
+<h5 class="font-bold">Treatment Process</h5>
+<p class="text-gray-600">Use professional tools to create realistic hair-like strokes in the hairline area</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">4</span>
+<div>
+<h5 class="font-bold">Touch-up & Adjustment</h5>
+<p class="text-gray-600">After 4-6 weeks, a touch-up session ensures natural and perfect results</p>
+</div>
+</li>
+</ol>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-3">Precautions</h4>
+<ul class="space-y-2">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Avoid washing hair, using hair care products, and strong sunlight for one week after the procedure</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Results typically last 1-3 years, depending on skin condition and aftercare</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Not recommended for pregnant women, nursing mothers, those with scalp issues, or a history of skin allergies</p>
+</li>
+</ul>
+</div>
+`
+}
+},
+eyelash: {
+zh: {
+title: '睫毛嫁接',
+content: `
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<img src="" alt="睫毛嫁接" class="w-full h-64 object-cover object-top rounded-lg">
+<div>
+<h4 class="text-xl font-bold mb-3">服務介紹</h4>
+<p class="text-gray-600 mb-4">睫毛嫁接是一種美容技術，通過將人工睫毛一根一根地嫁接到自然睫毛上，讓您擁有濃密、捲翹的睫毛，無需每天使用睫毛膏。</p>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>根據眼型設計最適合的睫毛長度和彎度</p>
+</div>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>自然濃密的睫毛效果</p>
+</div>
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>持久效果，省去每日使用睫毛膏的時間</p>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<h4 class="text-xl font-bold mb-3">服務流程</h4>
+<ol class="space-y-3">
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">1</span>
+<div>
+<h5 class="font-bold">睫毛設計</h5>
+<p class="text-gray-600">根據您的眼型和個人喜好，設計最適合的睫毛長度、彎度和密度</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">2</span>
+<div>
+<h5 class="font-bold">睫毛選擇</h5>
+<p class="text-gray-600">選擇最適合您的睫毛材質、粗細和長度</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">3</span>
+<div>
+<h5 class="font-bold">施術過程</h5>
+<p class="text-gray-600">使用專業工具，將人工睫毛一根一根地嫁接到自然睫毛上</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">4</span>
+<div>
+<h5 class="font-bold">修復與調整</h5>
+<p class="text-gray-600">約2-3週後進行修復調整，補充脫落的睫毛</p>
+</div>
+</li>
+</ol>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-3">注意事項</h4>
+<ul class="space-y-2">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">施術後24小時內避免沾水、使用油性產品和蒸汽</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">效果通常可維持4-6週，視個人睫毛生長週期和保養方式而定</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">有眼部感染、結膜炎或對膠水過敏者不建議進行此項服務</p>
+</li>
+</ul>
+</div>
+`
+},
+vi: {
+title: 'Nối Mi',
+content: `
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<img src="" alt="Nối Mi" class="w-full h-64 object-cover object-top rounded-lg">
+<div>
+<h4 class="text-xl font-bold mb-3">Giới Thiệu Dịch Vụ</h4>
+<p class="text-gray-600 mb-4">Nối mi là kỹ thuật làm đẹp, thông qua việc gắn từng sợi mi nhân tạo vào mi tự nhiên, giúp bạn có được hàng mi dày và cong, không cần sử dụng mascara hàng ngày.</p>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Thiết kế độ dài và độ cong mi phù hợp với đôi mắt</p>
+</div>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Hiệu ứng mi dày tự nhiên</p>
+</div>
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Hiệu quả lâu dài, tiết kiệm thời gian sử dụng mascara mỗi ngày</p>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<h4 class="text-xl font-bold mb-3">Quy Trình Dịch Vụ</h4>
+<ol class="space-y-3">
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">1</span>
+<div>
+<h5 class="font-bold">Thiết kế mi</h5>
+<p class="text-gray-600">Thiết kế độ dài, độ cong và mật độ mi phù hợp nhất dựa trên đôi mắt và sở thích cá nhân của bạn</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">2</span>
+<div>
+<h5 class="font-bold">Lựa chọn mi</h5>
+<p class="text-gray-600">Chọn chất liệu, độ dày và độ dài mi phù hợp nhất với bạn</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">3</span>
+<div>
+<h5 class="font-bold">Quá trình thực hiện</h5>
+<p class="text-gray-600">Sử dụng công cụ chuyên nghiệp để gắn từng sợi mi nhân tạo vào mi tự nhiên</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">4</span>
+<div>
+<h5 class="font-bold">Phục hồi và điều chỉnh</h5>
+<p class="text-gray-600">Sau 2-3 tuần sẽ tiến hành điều chỉnh, bổ sung những sợi mi đã rụng</p>
+</div>
+</li>
+</ol>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-3">Lưu Ý</h4>
+<ul class="space-y-2">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Tránh tiếp xúc với nước, sử dụng sản phẩm có dầu và hơi nước trong vòng 24 giờ sau khi thực hiện</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Hiệu quả thường kéo dài 4-6 tuần, tùy thuộc vào chu kỳ phát triển mi và cách chăm sóc</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Không khuyến khích cho người bị nhiễm trùng mắt, viêm kết mạc hoặc dị ứng với keo dán</p>
+</li>
+</ul>
+</div>
+`
+},
+en: {
+title: 'Eyelash Extensions',
+content: `
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<img src="" alt="Eyelash Extensions" class="w-full h-64 object-cover object-top rounded-lg">
+<div>
+<h4 class="text-xl font-bold mb-3">Service Introduction</h4>
+<p class="text-gray-600 mb-4">Eyelash extensions are a beauty technique that attaches artificial lashes one by one to your natural lashes, giving you fuller, curlier lashes without the need for daily mascara application.</p>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Custom lash length and curl design based on eye shape</p>
+</div>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Natural, fuller lash effect</p>
+</div>
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Long-lasting results, saving daily mascara application time</p>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<h4 class="text-xl font-bold mb-3">Service Process</h4>
+<ol class="space-y-3">
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">1</span>
+<div>
+<h5 class="font-bold">Lash Design</h5>
+<p class="text-gray-600">Design the most suitable lash length, curl, and density based on your eye shape and personal preferences</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">2</span>
+<div>
+<h5 class="font-bold">Lash Selection</h5>
+<p class="text-gray-600">Select the most suitable lash material, thickness, and length for you</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">3</span>
+<div>
+<h5 class="font-bold">Treatment Process</h5>
+<p class="text-gray-600">Use professional tools to attach artificial lashes one by one to your natural lashes</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">4</span>
+<div>
+<h5 class="font-bold">Touch-up & Adjustment</h5>
+<p class="text-gray-600">After 2-3 weeks, a touch-up session replenishes shed lashes</p>
+</div>
+</li>
+</ol>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-3">Precautions</h4>
+<ul class="space-y-2">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Avoid water, oil-based products, and steam for 24 hours after the procedure</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Results typically last 4-6 weeks, depending on your natural lash growth cycle and aftercare</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Not recommended for those with eye infections, conjunctivitis, or allergies to adhesives</p>
+</li>
+</ul>
+</div>
+`
+}
+},
+eyeliner: {
+zh: {
+title: '眼線定妝',
+content: `
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<img src="" alt="眼線定妝" class="w-full h-64 object-cover object-top rounded-lg">
+<div>
+<h4 class="text-xl font-bold mb-3">服務介紹</h4>
+<p class="text-gray-600 mb-4">眼線定妝是一種半永久性的美容技術，通過精細的色料注入，在眼睛輪廓處創造出精緻的眼線效果，讓您的眼睛更加深邃有神，無需每天畫眼線。</p>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>根據眼型設計最適合的眼線粗細和形狀</p>
+</div>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>自然精緻的眼線效果</p>
+</div>
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>持久效果，省去每日畫眼線的時間</p>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<h4 class="text-xl font-bold mb-3">服務流程</h4>
+<ol class="space-y-3">
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">1</span>
+<div>
+<h5 class="font-bold">眼線設計</h5>
+<p class="text-gray-600">根據您的眼型和個人喜好，設計最適合的眼線粗細和形狀</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">2</span>
+<div>
+<h5 class="font-bold">色料選擇</h5>
+<p class="text-gray-600">選擇最適合您的眼線顏色，確保效果自然</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">3</span>
+<div>
+<h5 class="font-bold">施術過程</h5>
+<p class="text-gray-600">使用專業工具，精細地在眼睛輪廓處注入色料，創造出精緻的眼線效果</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">4</span>
+<div>
+<h5 class="font-bold">修復與調整</h5>
+<p class="text-gray-600">約4-6週後進行修復調整，確保眼線效果完美</p>
+</div>
+</li>
+</ol>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-3">注意事項</h4>
+<ul class="space-y-2">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">施術後一週內避免沾水、使用化妝品和接觸強烈陽光</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">效果通常可維持1-3年，視個人皮膚狀況和保養方式而定</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">孕婦、哺乳期婦女、有眼部感染或皮膚過敏史者不建議進行此項服務</p>
+</li>
+</ul>
+</div>
+`
+},
+vi: {
+title: 'Phun Mí',
+content: `
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<img src="" alt="Phun Mí" class="w-full h-64 object-cover object-top rounded-lg">
+<div>
+<h4 class="text-xl font-bold mb-3">Giới Thiệu Dịch Vụ</h4>
+<p class="text-gray-600 mb-4">Phun mí là kỹ thuật làm đẹp bán vĩnh viễn, thông qua việc đưa sắc tố vào đường viền mắt một cách tinh tế, tạo ra hiệu ứng đường viền mắt tinh tế, giúp đôi mắt của bạn sâu lắng và sắc sảo hơn, không cần kẻ mắt mỗi ngày.</p>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Thiết kế độ dày và hình dáng đường viền mắt phù hợp với đôi mắt</p>
+</div>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Hiệu ứng đường viền mắt tự nhiên và tinh tế</p>
+</div>
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Hiệu quả lâu dài, tiết kiệm thời gian kẻ mắt mỗi ngày</p>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<h4 class="text-xl font-bold mb-3">Quy Trình Dịch Vụ</h4>
+<ol class="space-y-3">
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">1</span>
+<div>
+<h5 class="font-bold">Thiết kế đường viền mắt</h5>
+<p class="text-gray-600">Thiết kế độ dày và hình dáng đường viền mắt phù hợp nhất dựa trên đôi mắt và sở thích cá nhân của bạn</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">2</span>
+<div>
+<h5 class="font-bold">Lựa chọn màu sắc</h5>
+<p class="text-gray-600">Chọn màu đường viền mắt phù hợp nhất với bạn để đảm bảo hiệu quả tự nhiên</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">3</span>
+<div>
+<h5 class="font-bold">Quá trình thực hiện</h5>
+<p class="text-gray-600">Sử dụng công cụ chuyên nghiệp để đưa sắc tố vào đường viền mắt một cách tinh tế, tạo ra hiệu ứng đường viền mắt tinh tế</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">4</span>
+<div>
+<h5 class="font-bold">Phục hồi và điều chỉnh</h5>
+<p class="text-gray-600">Sau 4-6 tuần sẽ tiến hành điều chỉnh để đảm bảo hiệu quả đường viền mắt hoàn hảo</p>
+</div>
+</li>
+</ol>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-3">Lưu Ý</h4>
+<ul class="space-y-2">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Tránh tiếp xúc với nước, sử dụng mỹ phẩm và ánh nắng mạnh trong vòng một tuần sau khi thực hiện</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Hiệu quả thường kéo dài 1-3 năm, tùy thuộc vào tình trạng da và cách chăm sóc</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Không khuyến khích cho phụ nữ mang thai, đang cho con bú, người bị nhiễm trùng mắt hoặc có tiền sử dị ứng da</p>
+</li>
+</ul>
+</div>
+`
+},
+en: {
+title: 'Eyeliner Enhancement',
+content: `
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<img src="" alt="Eyeliner Enhancement" class="w-full h-64 object-cover object-top rounded-lg">
+<div>
+<h4 class="text-xl font-bold mb-3">Service Introduction</h4>
+<p class="text-gray-600 mb-4">Eyeliner enhancement is a semi-permanent beauty technique that creates a refined eyeliner effect through fine pigment application along the eye contour, making your eyes appear deeper and more defined without the need for daily eyeliner application.</p>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Custom eyeliner thickness and shape based on eye shape</p>
+</div>
+<div class="flex items-center mb-2">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Natural, refined eyeliner effect</p>
+</div>
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p>Long-lasting results, saving daily eyeliner application time</p>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<h4 class="text-xl font-bold mb-3">Service Process</h4>
+<ol class="space-y-3">
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">1</span>
+<div>
+<h5 class="font-bold">Eyeliner Design</h5>
+<p class="text-gray-600">Design the most suitable eyeliner thickness and shape based on your eye shape and personal preferences</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">2</span>
+<div>
+<h5 class="font-bold">Color Selection</h5>
+<p class="text-gray-600">Select the most suitable eyeliner color for you to ensure natural results</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">3</span>
+<div>
+<h5 class="font-bold">Treatment Process</h5>
+<p class="text-gray-600">Use professional tools to delicately apply pigments along the eye contour, creating a refined eyeliner effect</p>
+</div>
+</li>
+<li class="flex">
+<span class="bg-primary/10 text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">4</span>
+<div>
+<h5 class="font-bold">Touch-up & Adjustment</h5>
+<p class="text-gray-600">After 4-6 weeks, a touch-up session ensures perfect eyeliner effect</p>
+</div>
+</li>
+</ol>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-3">Precautions</h4>
+<ul class="space-y-2">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Avoid water, cosmetics, and strong sunlight for one week after the procedure</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Results typically last 1-3 years, depending on skin condition and aftercare</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-information-line text-primary"></i>
+</div>
+<p class="text-gray-600">Not recommended for pregnant women, nursing mothers, those with eye infections, or a history of skin allergies</p>
+</li>
+</ul>
+</div>
+`
+}
+}
+};
+serviceDetailBtns.forEach(btn => {
+btn.addEventListener('click', function() {
+const service = this.getAttribute('data-service');
+const currentLang = localStorage.getItem('preferredLanguage') || 'zh';
+if (serviceDetails[service] && serviceDetails[service][currentLang]) {
+modalTitle.textContent = serviceDetails[service][currentLang].title;
+modalContent.innerHTML = serviceDetails[service][currentLang].content;
+serviceModal.classList.remove('hidden');
+}
+});
+});
+function closeModal() {
+serviceModal.classList.add('hidden');
+}
+closeModalBtn.addEventListener('click', closeModal);
+closeModalBtnBottom.addEventListener('click', closeModal);
+closeModalBtnBottomVi.addEventListener('click', closeModal);
+closeModalBtnBottomEn.addEventListener('click', closeModal);
+// Close modal when clicking outside the content
+serviceModal.addEventListener('click', function(e) {
+if (e.target === serviceModal) {
+closeModal();
+}
+});
+// Close modal with Escape key
+document.addEventListener('keydown', function(e) {
+if (e.key === 'Escape' && !serviceModal.classList.contains('hidden')) {
+closeModal();
+}
+});
+});
+</script>
+</body>
+</html>
